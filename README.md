@@ -189,7 +189,7 @@ footer {
 <body>
 
 <header>
-    <h1>🐟 CUPANG ADUAN & HIAS</h1>
+    <h1>🐟 CUPANG & HIAS</h1>
     <p>Jual Ikan Cupang Berkualitas Harga Terjangkau</p>
 </header>
 
@@ -208,7 +208,7 @@ footer {
 <div class="produk">
     <div class="card">
         <img src="https://operational-magenta-ysxzubp41t.edgeone.app/IMG-20260406-WA0041.jpg"
-        style="width:100%; height:200px; object-fit:cover;">
+     style="width:100%; height:200px; object-fit:cover;">
 
         <h3>Cupang Hias Clasik</h3>
 
@@ -223,7 +223,9 @@ footer {
 
 </div>
 <div class="card">
-        <img src="https://iili.io/BrHjSnV.jpg">
+        <img src="https://operational-magenta-ysxzubp41t.edgeone.app/IMG-20260406-WA0041.jpg"
+     style="width:100%; height:200px; object-fit:cover;">
+
 
         <h3>Cupang Hias Clasik</h3>
 
