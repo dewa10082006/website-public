@@ -10,35 +10,14 @@ body {
     font-family: Arial;
     margin: 0;
     min-height: 100vh;
-
-    background: radial-gradient(circle at 20% 30%, rgba(0,255,150,0.3), transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(0,200,100,0.3), transparent 40%),
-                linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background:
+        radial-gradient(circle at 20% 30%, rgba(0,255,150,0.3), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(0,200,100,0.3), transparent 40%),
+        linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     background-attachment: fixed;
     color: white;
-} /* ===== PRODUK ===== */
-.produk {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
 }
 
-/* CARD */
-.card {
-    background: rgba(255,255,255,0.1);
-    padding: 15px;
-    border-radius: 15px;
-}
-
-/* RATING */
-.rating {
-    color: gold;
-}
-
-/* ULASAN */
-.ulasan {
-    font-size: 13px;
-}
 /* HEADER */
 header {
     background: rgba(0,0,0,0.6);
@@ -66,10 +45,9 @@ nav a:hover {
 }
 
 /* CONTAINER */
-.container { 
+.container {
     padding: 20px;
 }
-
 
 /* PRODUK */
 .produk {
@@ -89,6 +67,7 @@ nav a:hover {
     text-align: center;
     transition: 0.4s;
     box-shadow: 0 0 10px rgba(0,255,150,0.2);
+    animation: fadeUp 1s ease;
 }
 
 .card:hover {
@@ -101,6 +80,16 @@ nav a:hover {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+/* RATING */
+.rating {
+    color: gold;
+}
+
+/* ULASAN */
+.ulasan {
+    font-size: 13px;
 }
 
 /* BUTTON */
@@ -128,6 +117,7 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
+/* BOX */
 .box {
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
@@ -137,12 +127,23 @@ nav a:hover {
 }
 
 /* FORM */
-input, textarea, select {
+form {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+input,
+textarea,
+select {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
     border: none;
+    box-sizing: border-box;
 }
 
 button {
@@ -168,11 +169,7 @@ footer {
     margin-top: 20px;
 }
 
-/* ANIMASI MASUK */
-.card {
-    animation: fadeUp 1s ease;
-}
-
+/* ANIMASI */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -189,8 +186,7 @@ footer {
 <body>
 
 <header>
-    <h1>🐟 CUPANG & HIAS</h1>
-    <h1> JUAL CUPANG HIAS DAN ADUAN MDS YOGYAKARTA</h1>
+    <h1>🐟 CUPANG MDS & HIAS</h1>
     <p>Jual Ikan Cupang Berkualitas Harga Terjangkau</p>
 </header>
 
@@ -201,98 +197,83 @@ footer {
 </nav>
 
 <div class="container">
-    
 
-<h2 id="produk">Produk Cupang</h2>
+    <h2 id="produk">Produk Cupang</h2>
 
-<div class="produk">
-<div class="produk">
-    <div class="card">
-        <img src="https://operational-magenta-ysxzubp41t.edgeone.app/IMG-20260406-WA0041.jpg"
-     style="width:100%; height:200px; object-fit:cover;">
+    <div class="produk">
 
-        <h3>Cupang Hias Clasik</h3>
+        <div class="card">
+            <img src="https://operational-magenta-ysxzubp41t.edgeone.app/IMG-20260406-WA0041.jpg">
+            <h3>Cupang Hias Clasik</h3>
+            <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+            <p class="ulasan">"indah dan menawan!"</p>
+            <p><b>Rp 25.000</b></p>
+        </div>
 
-        <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+        <div class="card">
+            <img src="https://operational-magenta-ysxzubp41t.edgeone.app/IMG-20260406-WA0041.jpg">
+            <h3>Cupang Hias Clasik</h3>
+            <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+            <p class="ulasan">"ganas dan berkualitas!"</p>
+            <p><b>Rp 25.000</b></p>
+        </div>
 
-        <p class="ulasan">
-            "indah dan menawan!"
-        </p>
-
-        <p><b>Rp 25.000</b></p>
     </div>
 
-</div>
-<div class="card">
-        <img src="https://operational-magenta-ysxzubp41t.edgeone.app/IMG-20260406-WA0041.jpg"
-     style="width:100%; height:200px; object-fit:cover;">
+    <h2 id="kontak">Kontak Kami</h2>
 
+    <div class="kontak">
 
-        <h3>Cupang Hias Clasik</h3>
+        <div class="box">
+            <h3>WhatsApp</h3>
+            <a class="btn" href="https://wa.me/6283177094560">Chat WA</a>
 
-        <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+            <h3>Email</h3>
+            <p>syahdewadewa879@gmail.com</p>
 
-        <p class="ulasan">
-            "ganas dan berkualitas!"
-        </p>
-        <p><b>Rp 25.000</b></p>
-</div>
+            <h3>Instagram</h3>
+            <p>SMART FISH HIAS</p>
+        </div>
 
+        <div class="box">
+            <h3>Lokasi</h3>
+            <p>Yogyakarta</p>
 
+            <iframe
+                src="https://www.google.com/maps?q=KOLAM+LELE+SMART+FISH,+Jl.+Tutul+2,+Nologaten,+Depok,+Sleman,+Yogyakarta&output=embed"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
 
-</div>
-<h2 id="kontak">Kontak Kami</h2>
-<div class="kontak">
-<div class="box">
-    <h3>WhatsApp</h3>
-    <a class="btn" href="https://wa.me/6283177094560">Chat WA</a>
+        <form>
+            <h2>Form Pemesanan</h2>
 
-    <h3>Email</h3>
-    <p>syahdewadewa879@gmail.com</p>
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="tel" placeholder="No WhatsApp" required>
+            <input type="text" placeholder="Alamat" required>
 
-    <h3>Instagram</h3>
-    <p>SMART FISH HIAS</p>
-</div>
+            <select required>
+                <option>Pilih Jenis</option>
+                <option>Cupang Hias</option>
+                <option>Cupang Aduan</option>
+            </select>
 
-<div class="box">
-    <h3>Lokasi</h3>
-    <p>Yogyakarta</p>
+            <input type="number" placeholder="Jumlah" min="1">
 
-    <iframe 
-  src="https://www.google.com/maps?q=KOLAM+LELE+SMART+FISH,+Jl.+Tutul+2,+Nologaten,+Depok,+Sleman,+Yogyakarta&output=embed"
-  width="100%" 
-  height="400" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy">
-</iframe>
+            <textarea placeholder="Catatan"></textarea>
 
-</div>
+            <button>Kirim Pesanan</button>
+        </form>
 
-<form>
-<h2>Form Pemesanan</h2>
-
-<input type="text" placeholder="Nama Lengkap" required>
-<input type="tel" placeholder="No WhatsApp" required>
-<input type="text" placeholder="Alamat" required>
-
-<select required>
-<option>Pilih Jenis</option>
-<option>Cupang Hias</option>
-<option>Cupang Aduan</option>
-</select>
-
-<input type="number" placeholder="Jumlah" min="1">
-
-<textarea placeholder="Catatan"></textarea>
-
-<button>Kirim Pesanan</button>
-</form>
-
+    </div>
 </div>
 
 <footer>
-<p>© 2026 Toko Cupang</p>
+    <p>© 2026 Toko Cupang</p>
 </footer>
 
 </body>
